@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<meta name="keywords" content="sidereal time, star charts">
+<meta charset="UTF-8">
+
+<head>
+    <title>Sidereal Time and Star Charts</title>
+    <link rel="stylesheet" href="sidereal_min.css">
+    <script src="jquery-3.6.4.min.js"></script>
+    <script src="index_c.js"></script>
+</head>
+
+<body onload="init()">
+    <div id="wrapper">
+        <div id="riseSetArea">
+            
+        </div><br>
+        <div id="starCharts">
+            <h1>Local Star Charts</h1>
+            <p>Location 1: <span id="place1"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Longitude: <span
+                    id="long1"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Latitude: <span id="lat1"></span></p>
+            <div id="warning1"></div>
+            <p>Local Time: <span id="time1"></span>,&nbsp;&nbsp;&nbsp; Sidereal Time: <span id="siderealTime1"></span>
+            </p>
+            <div class="canvaswrapper"><canvas id="loc1" width="800" height="800">CANVAS NOT SUPPORTED IN THIS
+                    BROWSER!</canvas>
+                <div id="tip1" class="tip">
+                    <div class="close" onclick='closePopup("tip1")'>&#10005;</div>
+                    <div id="tip1text"></div>
+                </div>
+            </div>
+            <div class="control">
+                <p>Show/Hide: <button id="showPlanets1" class="active" onclick='showHide(1,"Planets")'>Sun, Moon,
+                        Planets</button> <button id="showEquator1" onclick='showHide(1,"Equator")'>Equator</button>
+                    <button id="showEcliptic1" onclick='showHide(1,"Ecliptic")'>Ecliptic</button> <button
+                        id="showGalactic1" onclick='showHide(1,"Galactic")'>Galactic</button> <button id="showMilkyWay1"
+                        class="active" onclick='showHide(1,"MilkyWay")'>Milky Way</button> <button id="showConLines1"
+                        class="active" onclick='showHide(1,"ConLines")'>Con. lines</button> <button id="showConLab1"
+                        onclick='showHide(1,"ConLab")'>Con. labels</button> <button id="showDayNight1" class="active"
+                        onclick='showHide(1,"DayNight")'>Day/Night</button></p>
+                <p>Azimuth at the top = <input type="number" name="rotation" id="rotate1" style="width:40px"> degrees.
+                    <input type="submit" value="Submit" onclick="rotInput(1)"></p>
+                <div id="errRotate1"></div>
+            </div>
+            <p class="animate"><button class="setupAnimate" onclick="displayAnimationSetup(1)">Animation Setup</button>
+                <button class="controlAnimate" onclick="Animate(1)" id="animate1">Play Animation</button> <button
+                    class="controlAnimate" onclick="playAnimation(1,1)">+1 Frame</button> <button class="controlAnimate"
+                    onclick="playAnimation(1,-1)">-1 Frame</button></p>
+            <div id="animationSetup1"></div><br><br><br>
+        </div>
+    </div><noscript>
+        <h2>Oops!</h2>
+        <p>You must enable JavaScript to use this page.</p>
+        <p>Please enable JavaScript and reload.</p>
+    </noscript><br><br>
+    <footer>
+        <hr>
+        <p style="text-align:center">&copy; 2018&ndash;2023 by Yuk Tung Liu</p>
+    </footer>
+</body>
+
+</html>

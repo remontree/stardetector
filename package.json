@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@react-three/fiber": "^8.15.11",
+    "d3": "^7.8.5",
+    "react-leaflet": "^4.2.1",
+    "react-three-fiber": "^6.0.13",
+    "three": "^0.158.0",
+    "versor": "^0.2.0"
+  }
+}
